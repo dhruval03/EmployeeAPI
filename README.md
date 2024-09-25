@@ -1,41 +1,56 @@
-# Asp.Net-Core-Web-API-CRUD-Operations
-Asp.Net Core Web API CRUD Operations
+# Employee API
 
+## Overview
 
-Points discussed :
--	Create .Net Core Web API Project
--	What is meant by CRUD Operations in an Restfull API
--	Test & Verify Web API Methods using Swagger Interface
--	Setup EF Model & Create the Database
--	API Controller with CRUD Web Methods
--	GET Web Method for Read Operation
--	Insert a Record using Post Web Method
--	Common Status Codes in Web APIs
--	Retrieve a Specific Record with Given ID
--	Update Operation using PUT Web Method
--	Various Return Types
--	Delete Operation
+The Employee API is a simple RESTful service built with ASP.NET Core. It provides a straightforward way to manage employee records, supporting various operations such as creating, reading, updating, and deleting employee data.
 
+## Features
 
-# Steps to Create Web API :
+- **CRUD Operations**: Create, Read, Update, and Delete employee records.
+- **Search Functionality**: Easily search for employees by name.
+- **Basic Authentication**: Secure access to endpoints.
 
-- Create Web API Project
-- Install Packages using NuGet Package Manager Console
-```
-Install-Package Install-Package Microsoft.EntityFrameworkCore.SqlServer
-Install-Package Microsoft.EntityFrameworkCore.Tools
-Install-Package Microsoft.AspNetCore.Cors
-```
-- Define the Student Model
-- Set Up the Database Context (inside Data Folder)
-- Configure the Connection String - appsettings.json
-- Configure the Services in Program.cs
-- Create the CRUD Controller
-- Create and Apply Migrations in NuGet Package Manager Console
-```
-add-migration initial
-update-database
-```
-- Test the API
+## Getting Started
 
+### Prerequisites
 
+Before you begin, ensure you have the following installed:
+
+- [.NET SDK (6.0 or later)](https://dotnet.microsoft.com/download)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/dhruval03/EmployeeAPI.git
+   cd EmployeeAPI
+2. **Restore dependencies:**
+   
+   ```bash
+   dotnet restore
+
+3. **Configure the database connection:**
+   ```bash
+   "ConnectionStrings": {
+   "DefaultConnection": "Server=your_server;Database=EmployeeDB;User Id=your_user;Password=your_password;"
+    }
+
+4. **Apply database migrations:**:
+   ```bash
+    dotnet ef database update
+
+5. **Run the application:**:
+   ```bash
+    dotnet run
+
+### API Endpoints
+  - GET /api/employees - Get all employees
+  - GET /api/employees/{id} - Get an employee by ID
+  - POST /api/employees - Create a new employee
+  - PUT /api/employees/{id} - Update an employee
+  - DELETE /api/employees/{id} - Delete an employee
+
+### Contact
+For any inquiries, please reach out at maniyardhruval1290@gmail.com.
